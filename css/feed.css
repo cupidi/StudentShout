@@ -1,0 +1,5 @@
+.addBox:focus{
+    outline: none;
+    border-color: #f39c12;
+    box-shadow: 0 0 10px #f39c12;
+}
