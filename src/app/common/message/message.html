@@ -1,23 +1,19 @@
-<div ng-controller="MessageCtrl">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="btn-group">
-                <label class="btn btn-success glyphicon glyphicon-time kopce col-xs-6 col-sm-6" ng-model="radioModel" btn-radio="'Predmet'">
-                    Предмет</label>
-                <label class="btn btn-success glyphicon glyphicon-book kopce col-xs-6 col-sm-6" ng-model="radioModel" btn-radio="'Raspored'">
-                    Распоред</label>
-            </div>
-        </div>
-        <div class="row">
-	        <textarea maxlength="200" id="tekst" class="form-control addBox" rows="7" ng-model="message" />
-        </div>
-        <div class="row">
-            <label id="charNum" class="options pull-right">
-                <span ng-bind="message.length"> characters left</span>
-            </label>
-            <div class=text-right>
-                <button class="btn btn-warning">Submit</button>
-            </div>
-        </div>
+<div ng-controller="MessageCtrl" class="container-fluid">
+    <div class="row">
+	        <div class="btn-group center-block">
+	            <label class="btn btn-success glyphicon glyphicon-time kopce col-xs-6 col-sm-6" ng-model="radioModel" btn-radio="'Predmet'">
+	                Предмет</label>
+	            <label class="btn btn-success glyphicon glyphicon-book kopce col-xs-6 col-sm-6" ng-model="radioModel" btn-radio="'Raspored'">
+	                Распоред</label>
+	        </div>
+    </div>
+    <div class="row">
+        <textarea maxlength="200" id="tekst" class="form-control addBox" rows="7" ng-model="message" />
+    </div>
+    <div class="row text-right">
+        <label id="charNum" class="options">
+            <span ng-bind="200 - message.length"></span> characters left
+        </label>
+		<button class="btn btn-warning">Submit</button>
     </div>
 </div>
