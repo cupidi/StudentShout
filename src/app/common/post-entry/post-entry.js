@@ -1,11 +1,11 @@
 angular.module('post.entry', [])
 
-.directive('post-entry', function() {
+.directive('postEntry', function() {
   return {
     restrict: 'E',
     scope: {
       postInfo: '=info'
     },
-    templateUrl: 'post-entry.html'
+    templateUrl: 'app/common/post-entry/post-entry.html'
   };
 });

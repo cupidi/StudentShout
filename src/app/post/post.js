@@ -6,6 +6,6 @@ angular.module('post', ['selector', 'message'])
     controller:'PostCtrl',  	
   })}])
 
-.controller('PostCtrl', ['$scope', '$location', function ($scope, $location) {
-	
+.controller('PostCtrl', ['$rootScope', '$scope', '$location', function ($rootScope, $scope, $location) {
+	$rootScope.showAllCat = false;
 }]);

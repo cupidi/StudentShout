@@ -1,7 +1,7 @@
 <div ng-controller="SelectorCtrl" class="container-fluid">
 	<div class="row">
-		<select class="form-control addBox">
-		    <option ng-repeat="x in categories">{{x}}</option>
-		</select>
+		<select class="form-control addBox" ng-model="selectedTheme"
+		                ng-options="x as x.theme for x in categories" ng-change="onSelected()">
+        </select>
 	</div>
 </div>

@@ -1,59 +1,21 @@
-<div ng-include="'app/common/selector/selector.html'"></div>	
+<div ng-include="'app/common/selector/selector.html'" onload="setShowAll()"></div>	
 <div class="row">
 	<tabset justified="true" type="pills" class="col-xs-12">
-	    <tab heading="New">
+	    <tab heading="Нови">
 			<div class="panel panel-default">
 				<div class="panel-body">
-			        <div class="panel panel-success">
-			            <div class="panel-heading">PRV TAB</div>
-			            <div class="panel-body">
-			                Panel content
-			            </div>
-			        </div>
-			        <div class="panel panel-success">
-			            <div class="panel-heading">PRV TAB</div>
-			            <div class="panel-body">
-			                Panel content
-			            </div>
-			        </div>
-			        <div class="panel panel-success">
-			            <div class="panel-heading">PRV TAB</div>
-			            <div class="panel-body">
-			                Panel content
-			            </div>
-			        </div>
-			        <div class="panel panel-success">
-			            <div class="panel-heading">PRV TAB</div>
-			            <div class="panel-body">
-			                Panel content
-			            </div>
-			        </div>
-			        <div class="panel panel-success">
-			            <div class="panel-heading">PRV TAB</div>
-			            <div class="panel-body">
-			                Panel content
-			            </div>
-			        </div>
-			        <div class="panel panel-success">
-			            <div class="panel-heading">PRV TAB</div>
-			            <div class="panel-body">
-			                Panel content
-			            </div>
-			        </div>
+			    	<post-entry ng-repeat="x in fPosts = (posts | filter: selectedTheme || undefined: true)" info="x"></post-entry>
+					<p ng-show="!fPosts.length">Нема пораки.</p>
 	            </div>
 	        </div>
 		</tab>
-	    <tab heading="Top Rated">
+	    <tab heading="Најпопуларни">
 			<div class="panel panel-default">
 				<div class="panel-body">
-			        <div class="panel panel-success">
-			            <div class="panel-heading">PRV TAB</div>
-			            <div class="panel-body">
-			                Panel content
-			            </div>
-			        </div>
-				</div>
-			</div>
+			    	<post-entry ng-repeat="x in fPosts = (posts | filter: selectedTheme || undefined: true)" info="x"></post-entry>
+					<p ng-show="!fPosts.length">Нема пораки.</p>
+	            </div>
+	        </div>
 		</tab>
 	</tabset>    
 </div>

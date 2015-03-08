@@ -6,6 +6,16 @@ angular.module('feed', ['selector'])
     controller:'FeedCtrl',  	
   })}])
 
-.controller('FeedCtrl', ['$scope', '$location', function ($scope, $location) {
+.controller('FeedCtrl', ['$rootScope', '$scope', '$location', 'Posts', function ($rootScope, $scope, $location, Posts) {
+	
+	$rootScope.showAllCat = true;
+	
+	Posts.async().then(function(posts) {
+		$scope.posts = posts;
+	});
+	
+	$scope.$on('selected', function(event, theme) {
+	    $scope.selectedTheme = theme.value;
+	  });
 	
 }]);
