@@ -3,3 +3,16 @@
     border-color: #f39c12;
     box-shadow: 0 0 10px #f39c12;
 }
+.addBox{
+    margin-bottom: 0.6%;
+    padding: 0.1%;
+    border-width: medium;
+    border-color: #f39c12;
+    resize: none;
+}
+#charNum{
+    color:#f39c12
+}
+.kopce{
+    margin-bottom: 1%;
+}
