@@ -1,0 +1,16 @@
+<div ng-controller="MessageCtrl">
+	
+	<textarea maxlength="200" id="tekst" class="form-control addBox" 
+		style="border-width: medium; border-color: #f39c12; resize: none" ng-model="message">
+		
+	</textarea>
+		  
+	<label id="charNum" class="options pull-right" style="margin-bottom: 5px;color:#f39c12">
+		<span ng-bind="message.length"> characters left
+	</label>
+
+	<div class=text-right>
+	    <button class="btn btn-warning" style="margin-bottom: 5px">Submit</button>
+	</div>
+	
+</div>

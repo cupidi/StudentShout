@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+	    <!-- Meta-Information -->
+	    <title>StudentShout</title>
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	    <!-- CSS Styles -->
+	    <link rel="stylesheet" href="assets/css/bootstrap.css">
+		<link rel="stylesheet" href="assets/css/feed.css">
+
+	</head>
+	<body ng-app="studentShout">
+
+		<div ng-include="'app/header.html'"></div>
+		<div ng-view></div>
+
+
+		<!-- Javascripts -->
+
+		<script src="assets/libs/jquery.min.js"></script>
+		<script src="assets/libs/bootstrap.js"></script>
+		<script src="assets/libs/angular.js"></script>
+		<script src="assets/libs/angular-route.js"></script>
+		<script src="assets/libs/ui-bootstrap.js"></script>
+
+		<!-- Our Javascripts -->
+		<script src="app/common/resources/categories.js"></script>
+		<script src="app/common/selector/selector.js"></script>
+		<script src="app/common/message/message.js"></script>
+		<script src="app/post/post.js"></script>
+		<script src="app/feed/feed.js"></script>
+		<script src="app/app.js"></script>
+
+	</body>
+</html>

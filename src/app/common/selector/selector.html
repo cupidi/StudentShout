@@ -1,0 +1,9 @@
+<div ng-controller="SelectorCtrl">
+	<select class="form-control addBox" style="margin-bottom: 5px; border-width: medium; padding: 5px; border-color: #f39c12;">
+	    <option ng-repeat="x in categories">{{x}}</option>
+	</select>
+	<form name="typeSelector">
+	  <input type="radio" ng-model="postType" value="raspored">  Распоред <br/>
+	  <input type="radio" ng-model="postType" value="predavanje"> Предавање <br/>
+	 </form>
+</div>
