@@ -5,7 +5,7 @@ angular.module('resources.categories', [])
     var myService = {
       async: function() {
         if ( !promise ) {
-          promise = $http.get('test_jsons/categories.json').then(function (response) {
+          promise = $http.get('http://localhost:8888/studentShoutServer/get_themes.php').then(function (response) {
             return response.data;
           });
         }

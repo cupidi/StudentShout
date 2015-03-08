@@ -1,10 +1,12 @@
 <div class="panel panel-success">
     <div class="panel-heading">
-        <label class="glyphicon glyphicon-time" ng-show="postInfo.subtype == 1"></label>
-		<label class="glyphicon glyphicon-book" ng-show="postInfo.subtype == 2"></label>
-		{{postInfo.theme}}
+        <label class="glyphicon glyphicon-time" ng-show="postInfo.t_type == 1"></label>
+		<label class="glyphicon glyphicon-book" ng-show="postInfo.t_type == 2"></label>
+		<span>{{postInfo.t_name}}</span>
+		<span class="pull-right">{{postInfo.t_date}}</span>
+		
 	</div>
     <div class="panel-body">
-        {{postInfo.text}}
+        {{postInfo.t_content}}
     </div>
 </div>

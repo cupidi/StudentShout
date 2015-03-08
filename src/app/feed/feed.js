@@ -11,6 +11,7 @@ angular.module('feed', ['selector'])
 	$rootScope.showAllCat = true;
 	
 	Posts.async().then(function(posts) {
+		console.log("AAAAA");
 		$scope.posts = posts;
 	});
 	

@@ -4,7 +4,8 @@
 	    <tab heading="Нови">
 			<div class="panel panel-default">
 				<div class="panel-body">
-			    	<post-entry ng-repeat="x in fPosts = (posts | filter: selectedTheme || undefined: true)" info="x"></post-entry>
+			    	<post-entry ng-repeat="x in fPosts = (posts | filter: selectedTheme || undefined: true | orderBy: t_date: true)" info="x"></post-entry>
+
 					<p ng-show="!fPosts.length">Нема пораки.</p>
 	            </div>
 	        </div>
