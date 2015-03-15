@@ -3,7 +3,7 @@ include_once 'database.php';
 if($_GET["id"]) {
     try {
         $return_arr = array();
-        $conn = new PDO("mysql:host=$host;dbname=$dbname", $user, $password);
+        $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $password);
         $a = $_GET["id"];
         $sql = $conn->prepare("SELECT * FROM comments WHERE post_id = $a");
         $sql->setFetchMode(PDO::FETCH_OBJ);

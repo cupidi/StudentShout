@@ -1,8 +1,9 @@
 <?php
 include_once 'database.php';
+header('Content-Type: application/json; charset=utf-8');
 try {
     $return_arr = array();
-    $conn = new PDO("mysql:host=$host;dbname=$dbname", $user, $password);
+    $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $password);
     $sql = $conn->prepare("SELECT * FROM themes");
     $sql->setFetchMode(PDO::FETCH_OBJ);
     $sql->execute();
